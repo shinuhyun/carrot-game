@@ -14,6 +14,14 @@ body {
   text-align: center;
 }
 
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 35%;
+}
+
 button {
   border: none;
   cursor: pointer;
@@ -24,19 +32,11 @@ button {
   background-color: rgb(255, 184, 176);
   font-size: 50px;
 
-  transition: 300ms;
+  transition: transform 300ms;
 }
 
 button:hover {
   transform: scale(1.1);
-}
-
-header {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  height: 35%;
 }
 
 .time {
@@ -60,12 +60,28 @@ header {
   font-size: 60px;
 }
 
-img {
+section {
+  position: relative;
+  top: 10%;
+  height: 55%;
+  text-align: left;
+}
+
+.carrot,
+.bug {
+  visibility: hidden;
+  position: absolute;
   width: var(--btn-size);
+  transition: 300ms;
+}
+
+.carrot:hover,
+.bug:hover {
+  transform: scale(1.1);
 }
 
 .replay {
-  /* visibility: hidden; */
+  visibility: hidden;
 
   position: fixed;
   width: 50%;
